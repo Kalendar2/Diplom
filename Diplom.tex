@@ -1,0 +1,95 @@
+\documentclass[oneside,final,12pt]{extarticle} %размер бумаги устанавливаем А4, шрифт 12пунктов
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[english,russian]{babel}%используем русский и английский языки с переносами
+\usepackage{vmargin}
+\setpapersize{A4}
+\setmarginsrb{26mm}{10mm}{8mm}{8mm}{0pt}{0mm}{0mm}{17mm}
+\usepackage{indentfirst}
+\sloppy
+\usepackage{graphicx} %хотим вставлять в диплом рисунки?
+\usepackage{amssymb,amsfonts,amsmath,mathtext,cite,enumerate,float} %подключаем нужные пакеты расширений
+\usepackage{titlesec} %хотим вставлять в диплом рисунки?
+
+\titleformat{\section}{\filcenter\normalfont\Large\bfseries}{\thesection.}{0.6em}{}
+\titleformat{\subsection}{\filright\normalfont\large\bfseries}{\thesubsection.}{0.4em}{}
+
+\makeatletter
+\renewcommand*{\ps@plain}{%
+	\let\@mkboth\@gobbletwo
+	\let\@oddhead\@empty
+	\def\@oddfoot{%
+		\reset@font
+		\hfil
+		\thepage
+		% \hfil % removed for 
+		}%
+		\let\@evenhead\@empty
+		\let\@evenhead\@oddfoot
+}
+\makeatother
+\pagestyle{plain}
+
+\begin{document}
+\begin{titlepage}
+\centerline{МИНОБРНАУКИ РОССИИ}
+\centerline{ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ}
+\centerline{ВЫСШЕГО ОБРАЗОВАНИЯ}
+\centerline{"ВОРОНЕЖСКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ"}
+\centerline{(ФГБОУ ВО "ВГУ")}
+\vfill
+\centerline{Математический факультет}
+\centerline{Кафедра функционального анализа и операторных уравнений}
+\vfill
+\centerline{Курсовая работа на тему:}
+\centerline{Программная реализация алгоритмов генерации ФОС в формате ЕГЭ по теме}
+\centerline{"Прогрессии"}
+\centerline{02.03.01 Математика и компьютерные науки}
+\centerline{Профиль: Математическое и компьютерное моделирование}
+\vfill
+\null\hfill
+\begin{minipage}{0.85\textwidth}
+	Зав.\,Кафедрой\,
+	\rule{1.5cm}{0.25pt} д.физ-мат.н.,\,проф.\, Каменский~М.И.
+	\par
+	\medskip
+	Обучающийся\,
+	\rule{1.5cm}{0.25pt} \qquad\qquad\qquad\qquad\quad\quad\ Алендарь\,С.\,Д.
+	\par
+	\medskip
+	Руководитель\,
+	\rule{1.5cm}{0.25pt} д.физ-мат.н.,\,проф.\, Каменский~М.И.
+	\par
+	\medskip
+\end{minipage}
+\vfill
+\centerline{Воронеж 2024}
+\end{titlepage}
+\setcounter{page}{2}
+
+\section*{Содержание}
+\addcontentsline{toc}{section}{Содержание}
+\newpage
+
+\section*{Введение}
+\addcontentsline{toc}{section}{Введение}
+\newpage
+
+\section{Задания}
+\subsection{Примеры задач из ЕГЭ}
+\newpage
+\section{Шаблоны}
+\newpage
+
+\section*{Заключение}
+\addcontentsline{toc}{section}{Заключение}
+\newpage
+
+\addcontentsline{toc}{section}{Список Литературы}
+\begin{thebibliography}[]
+
+\end{thebibliography}
+\newpage
+\appendix
+
+\end{document}
