@@ -8,6 +8,7 @@
 \usepackage{indentfirst}
 \sloppy
 \usepackage{graphicx} %хотим вставлять в диплом рисунки?
+\graphicspath{ {../img/} } %теперь все пути рисунков отсчитываются от папки img
 \usepackage{amssymb,amsfonts,amsmath,mathtext,cite,enumerate,float} %подключаем нужные пакеты расширений
 \usepackage{titlesec} %хотим вставлять в диплом рисунки?
 
@@ -22,7 +23,7 @@
 		\reset@font
 		\hfil
 		\thepage
-		% \hfil % removed for 
+		% \hfil % removed for
 		}%
 		\let\@evenhead\@empty
 		\let\@evenhead\@oddfoot
@@ -79,19 +80,19 @@
 \chapter{Виртуальные машины VirtualBox}
 \section{Установка «VirtualBox» и «Ubuntu»}
 
-%\input{paragrafs/Ustanovka/Ustanovka.tex}
+\input{paragrafs/Ustanovka/Ustanovka.tex}
 
 \newpage
 \section{Работа с «github»}
-%\input{paragrafs/Github/Github.tex}
+\input{paragrafs/Github/Github.tex}
 \newpage
 
 \section{Клонирование виртуальной машины}
-%\input{paragrafs/Klonir/Klonir.tex}
+\input{paragrafs/Klonir/Klonir.tex}
 \newpage
 
 \section{Увеличение объёма памяти виртуальной машин}
-%\input{paragrafs/Uvelich/Uvelich.tex}
+\input{paragrafs/Uvelich/Uvelich.tex}
 \newpage
 
 \section*{Заключение}
