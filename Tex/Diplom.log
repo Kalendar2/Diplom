@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.5)  10 MAY 2024 18:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.5)  1 JUN 2024 16:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -416,28 +416,73 @@ File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count274
 \l__pdf_internal_box=\box55
 )
-(./Diplom.aux)
+(./Diplom.aux
+
+LaTeX Warning: Label `ris:image' multiply defined.
+
+
+LaTeX Warning: Label `ris:image' multiply defined.
+
+
+LaTeX Warning: Label `ris:image' multiply defined.
+
+
+LaTeX Warning: Label `ris:image' multiply defined.
+
+
+LaTeX Warning: Label `ris:image' multiply defined.
+
+
+LaTeX Warning: Label `ris:image' multiply defined.
+
+
+LaTeX Warning: Label `ris:image' multiply defined.
+
+
+LaTeX Warning: Label `ris:image' multiply defined.
+
+
+LaTeX Warning: Label `ris:image' multiply defined.
+
+
+LaTeX Warning: Label `ris:image' multiply defined.
+
+
+LaTeX Warning: Label `ris:image' multiply defined.
+
+
+LaTeX Warning: Label `ris:image' multiply defined.
+
+
+LaTeX Warning: Label `ris:image' multiply defined.
+
+
+LaTeX Warning: Label `ris:image' multiply defined.
+
+
+LaTeX Warning: Label `ris:image' multiply defined.
+
+)
 \openout1 = `Diplom.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Info: Redefining \th on input line 33.
-
-(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Info: Redefining \th on input line 34.
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count275
 \scratchdimen=\dimen159
@@ -459,13 +504,13 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 64.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 65.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 64.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 65.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -474,243 +519,113 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] (./paragrafs/Ustan
 ovka/Ustanovka.tex
+<../img//VM/1.png, id=14, 409.53pt x 157.58875pt>
+File: ../img//VM/1.png Graphic file (type png)
+<use ../img//VM/1.png>
+Package pdftex.def Info: ../img//VM/1.png  used on input line 5.
+(pdftex.def)             Requested size: 325.9126pt x 125.41951pt.
+<../img//VM/2.png, id=16, 406.51875pt x 141.52875pt>
+File: ../img//VM/2.png Graphic file (type png)
+<use ../img//VM/2.png>
+Package pdftex.def Info: ../img//VM/2.png  used on input line 14.
+(pdftex.def)             Requested size: 325.9126pt x 113.46933pt.
+<../img//VM/3.png, id=17, 423.5825pt x 177.66376pt>
+File: ../img//VM/3.png Graphic file (type png)
+<use ../img//VM/3.png>
+Package pdftex.def Info: ../img//VM/3.png  used on input line 23.
+(pdftex.def)             Requested size: 325.9126pt x 136.7039pt.
 
-! LaTeX Error: Can be used only in preamble.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1 \documentclass
-                  [oneside,final,12pt]{extarticle} %—Ä–∞–∑–º–µ—Ä –±—É–º–∞–≥–...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Can be used only in preamble.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2 \usepackage
-               [utf8]{inputenc}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Can be used only in preamble.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.3 \usepackage
-               [T2A]{fontenc}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Can be used only in preamble.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 \usepackage
-               [english,russian]{babel}%–∏—Å–ø–æ–ª—å–∑—É–µ–º —Ä—É—Å—Å–∫–∏–π ...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Can be used only in preamble.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.5 \usepackage
-               {vmargin}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Can be used only in preamble.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.8 \usepackage
-               {indentfirst}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Can be used only in preamble.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.10 \usepackage
-                {graphicx} %—Ö–æ—Ç–∏–º –≤—Å—Ç–∞–≤–ª—è—Ç—å –≤ –¥–∏–ø–ª–æ–º —Ä...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Can be used only in preamble.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.11 \usepackage
-                {amssymb,amsfonts,amsmath,mathtext,cite,enumerate,float} %–ø...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Can be used only in preamble.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.12 \usepackage
-                {titlesec} %—Ö–æ—Ç–∏–º –≤—Å—Ç–∞–≤–ª—è—Ç—å –≤ –¥–∏–ø–ª–æ–º —Ä...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--13
-[]\T2A/cmr/m/n/12 [oneside,final,12pt]extarticle [utf8]inputenc [T2A]fontenc [e
-nglish,russian]babelvmargin
- []
-
-
-! LaTeX Error: Can be used only in preamble.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14 \begin{document}
-                     
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-LaTeX Warning: File `img/1.png' not found on input line 22.
-
-
-! Package pdftex.def Error: File `img/1.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.22 ...egraphics[width=0.65\linewidth]{img/1.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 
-22.
-(/usr/share/texlive/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
-File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
-)
-
-LaTeX Warning: File `img/2.png' not found on input line 31.
-
-
-! Package pdftex.def Error: File `img/2.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.31 ...egraphics[width=0.65\linewidth]{img/2.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `img/3.png' not found on input line 40.
-
-
-! Package pdftex.def Error: File `img/3.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.40 ...egraphics[width=0.65\linewidth]{img/3.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 46--47
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
 []\T2A/cmr/m/n/12 3. —Í‡-˜Ë-‚‡-ÂÏ æUbuntuø Ò ÓÙË-ˆË-‡Î¸-ÌÓ-„Ó Ò‡È-Ú‡ ÔÓ ÒÒ˚Î-ÍÂ
 :
  []
 
+<../img//VM/4.png, id=18, 540.0175pt x 399.4925pt>
+File: ../img//VM/4.png Graphic file (type png)
+<use ../img//VM/4.png>
+Package pdftex.def Info: ../img//VM/4.png  used on input line 32.
+(pdftex.def)             Requested size: 325.9126pt x 241.10545pt.
+) [4 <../img//VM/1.png> <../img//VM/2.png>] [5 <../img//VM/3.png> <../img//VM/4
+.png>] (./paragrafs/Github/Github.tex
+<../img//VM/5.png, id=29, 72.27pt x 58.2175pt>
+File: ../img//VM/5.png Graphic file (type png)
+<use ../img//VM/5.png>
+Package pdftex.def Info: ../img//VM/5.png  used on input line 7.
+(pdftex.def)             Requested size: 50.14392pt x 40.39307pt.
+<../img//VM/6.png, id=30, 595.22375pt x 399.4925pt>
+File: ../img//VM/6.png Graphic file (type png)
+<use ../img//VM/6.png>
+Package pdftex.def Info: ../img//VM/6.png  used on input line 31.
+(pdftex.def)             Requested size: 325.9126pt x 218.74013pt.
+<../img//VM/7.png, id=31, 1034.86626pt x 168.63pt>
+File: ../img//VM/7.png Graphic file (type png)
+<use ../img//VM/7.png>
+Package pdftex.def Info: ../img//VM/7.png  used on input line 43.
+(pdftex.def)             Requested size: 501.4087pt x 81.7031pt.
+) [6 <../img//VM/5.png>] [7 <../img//VM/6.png> <../img//VM/7.png>] (./paragrafs
+/Klonir/Klonir.tex
+<../img//VM/8.png, id=43, 674.52pt x 470.75874pt>
+File: ../img//VM/8.png Graphic file (type png)
+<use ../img//VM/8.png>
+Package pdftex.def Info: ../img//VM/8.png  used on input line 6.
+(pdftex.def)             Requested size: 300.84828pt x 209.97185pt.
+<../img//VM/9.png, id=44, 437.635pt x 224.84pt>
+File: ../img//VM/9.png Graphic file (type png)
+<use ../img//VM/9.png>
+Package pdftex.def Info: ../img//VM/9.png  used on input line 27.
+(pdftex.def)             Requested size: 200.56041pt x 103.03996pt.
+<../img//VM/10.png, id=45, 702.625pt x 320.19624pt>
+File: ../img//VM/10.png Graphic file (type png)
+<use ../img//VM/10.png>
+Package pdftex.def Info: ../img//VM/10.png  used on input line 36.
+(pdftex.def)             Requested size: 325.9126pt x 148.52815pt.
+<../img//VM/11.png, id=46, 547.04375pt x 216.81pt>
+File: ../img//VM/11.png Graphic file (type png)
+<use ../img//VM/11.png>
+Package pdftex.def Info: ../img//VM/11.png  used on input line 45.
+(pdftex.def)             Requested size: 325.9126pt x 129.17061pt.
+<../img//VM/12.png, id=47, 833.1125pt x 286.06876pt>
+File: ../img//VM/12.png Graphic file (type png)
+<use ../img//VM/12.png>
+Package pdftex.def Info: ../img//VM/12.png  used on input line 73.
+(pdftex.def)             Requested size: 325.9126pt x 111.9112pt.
+<../img//VM/13.png, id=48, 901.3675pt x 349.305pt>
+File: ../img//VM/13.png Graphic file (type png)
+<use ../img//VM/13.png>
+Package pdftex.def Info: ../img//VM/13.png  used on input line 83.
+(pdftex.def)             Requested size: 325.9126pt x 126.29868pt.
+<../img//VM/14.png, id=49, 901.3675pt x 337.26pt>
+File: ../img//VM/14.png Graphic file (type png)
+<use ../img//VM/14.png>
+Package pdftex.def Info: ../img//VM/14.png  used on input line 103.
+(pdftex.def)             Requested size: 325.9126pt x 121.94356pt.
+) [8] [9 <../img//VM/8.png> <../img//VM/9.png>] [10 <../img//VM/10.png> <../img
+//VM/11.png>] [11 <../img//VM/12.png> <../img//VM/13.png> <../img//VM/14.png>]
+(./paragrafs/Uvelich/Uvelich.tex) [12] [13]
 
-LaTeX Warning: File `img/4.png' not found on input line 49.
+LaTeX Warning: Empty `thebibliography' environment on input line 105.
 
+[14] (./Diplom.aux)
 
-! Package pdftex.def Error: File `img/4.png' not found: using draft setting.
+LaTeX Warning: There were multiply-defined labels.
 
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.49 ...egraphics[width=0.65\linewidth]{img/4.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[4] [5] [6] [7] (./Diplom.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) )
-(\end occurred inside a group at level 1)
-
-### semi simple group (level 1) entered at line 14 (\begingroup)
-### bottom level 
+ ) 
 Here is how much of TeX's memory you used:
- 5104 strings out of 478287
- 77677 string characters out of 5849290
- 375253 words of memory out of 5000000
- 23209 multiletter control sequences out of 15000+600000
- 476641 words of font info for 50 fonts, out of 8000000 for 9000
+ 5078 strings out of 478287
+ 77332 string characters out of 5849290
+ 382308 words of memory out of 5000000
+ 23180 multiletter control sequences out of 15000+600000
+ 476668 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,5n,62p,1338b,324s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t2a.enc}</u
-sr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts
-/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-sup
-er/sftt1200.pfb>
-Output written on Diplom.pdf (7 pages, 81461 bytes).
+ 55i,6n,62p,1327b,236s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/texmf
+/fonts/enc/dvips/cm-super/cm-super-t2a.enc}</usr/share/texmf/fonts/type1/public
+/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.p
+fb>
+Output written on Diplom.pdf (14 pages, 1092831 bytes).
 PDF statistics:
- 44 PDF objects out of 1000 (max. 8388607)
- 28 compressed objects within 1 object stream
+ 94 PDF objects out of 1000 (max. 8388607)
+ 44 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 
