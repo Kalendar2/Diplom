@@ -1,11 +1,10 @@
-\documentclass[oneside,final,12pt]{extarticle} %размер бумаги устанавливаем А4, шрифт 12пунктов
+\documentclass[oneside,final,14pt]{extarticle} %размер бумаги устанавливаем А4, шрифт 12пунктов
 \usepackage[utf8]{inputenc}
 \usepackage[T2A]{fontenc}
 \usepackage[english,russian]{babel}%используем русский и английский языки с переносами
-\usepackage{vmargin}
-\setpapersize{A4}
-\setmarginsrb{26mm}{10mm}{8mm}{8mm}{0pt}{0mm}{0mm}{17mm}
 \usepackage{indentfirst}
+\setlength{\parindent}{1.25cm}
+\linespread{1.5}
 \usepackage{pdfpages}
 \sloppy
 \usepackage{graphicx} %хотим вставлять в диплом рисунки?
@@ -16,32 +15,35 @@
 \titleformat{\section}{\filcenter\normalfont\Large\bfseries}{\thesection.}{0.6em}{}
 \titleformat{\subsection}{\filright\normalfont\large\bfseries}{\thesubsection.}{0.4em}{}
 
+\usepackage{lipsum,mathptmx,etoolbox}
+
 \makeatletter
-\renewcommand*{\ps@plain}{%
-	\let\@mkboth\@gobbletwo
-	\let\@oddhead\@empty
-	\def\@oddfoot{%
-		\reset@font
-		\hfil
-		\thepage
-		% \hfil % removed for 
-		}%
-		\let\@evenhead\@empty
-		\let\@evenhead\@oddfoot
-}
+\patchcmd{\@makechapterhead}{\huge}{\large}{\bfseries}{}
+\patchcmd{\@makechapterhead}{\Huge}{\large}{\bfseries}{}
+\patchcmd{\@makeschapterhead}{\Huge}{\large}{\bfseries}{}
 \makeatother
+
+\usepackage{geometry} % Меняем поля страницы
+\geometry{left=3cm}% левое поле
+\geometry{right=1cm}% правое поле
+\geometry{top=2cm}% верхнее поле
+\geometry{bottom=2cm}% нижнее поле
+
 \pagestyle{plain}
 
 \begin{document}
 
-\includepdf[offset=2.5cm -2.5cm]{titulny_list_bak.pdf}
+\includepdf[offset=0cm -0cm]{titulny_list_bak.pdf}
 
 \setcounter{page}{2}
 
 \section*{Содержание}
-
+\setlength{\parindent}{0cm}
 \addcontentsline{toc}{section}{Содержание}
+\input{paragrafs/Soder/Soder.tex}
 \newpage
+
+\setlength{\parindent}{1.25cm}
 
 \section*{Введение}
 \addcontentsline{toc}{section}{Введение}
@@ -66,7 +68,7 @@
 \input{paragrafs/Uvelich/Uvelich.tex}
 \newpage
 
-\chapter{Практическая реализация шаблонов задач ЕГЭ по математике}
+\chapter{Практическая реализация шаблонов}
 \section*{Примеры задач и их код}
 \input{paragrafs/Zadachi/Zadachi.tex}
 \newpage
@@ -74,13 +76,15 @@
 
 \section*{Заключение}
 \addcontentsline{toc}{section}{Заключение}
+\input{paragrafs/Zakl/Zakl.tex}
 \newpage
 
+\section*{Список Литературы}
+\setlength{\parindent}{0cm}
 \addcontentsline{toc}{section}{Список Литературы}
-\begin{thebibliography}[]
-
-\end{thebibliography}
+\input{paragrafs/Spisok/Spisok.tex}
 \newpage
+
 \appendix
 
 \end{document}
