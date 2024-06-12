@@ -46,13 +46,18 @@
 \tableofcontents
 \newpage
 
-\section{Введение}
+\section*{Введение}
+\addcontentsline{toc}{section}{Введение}
 \input{paragrafs/Vvedenie/Vvedenie.tex}
 \newpage
 
 \section{Виртуальные машины VirtualBox}
 \subsection{Установка VirtualBox и Ubuntu}
 \input{paragrafs/Ustanovka/Ustanovka.tex}
+\newpage
+
+\subsection{Снимки виртуальной машины}
+\input{paragrafs/Snim/Snim.tex}
 \newpage
 
 \subsection{Клонирование виртуальной машины}
@@ -63,8 +68,21 @@
 \input{paragrafs/Uvelich/Uvelich.tex}
 \newpage
 
-\subsection{Работа с GitHub}
-\input{paragrafs/Github/Github.tex}
+\section{Работа с GitHub}
+\subsection{Установка git, nodejs, npm и grunt}
+\input{paragrafs/Github/git/git.tex}
+\newpage
+
+\subsection{Работа с репозиторием}
+\input{paragrafs/Github/rep/rep.tex}
+\newpage
+
+\subsection{Создание SSH ключа}
+\input{paragrafs/Github/ssh/ssh.tex}
+\newpage
+
+\subsection{Игнорирование файлов}
+\input{paragrafs/Github/ignore/ignore.tex}
 \newpage
 
 \section{Практическая реализация шаблонов}
@@ -73,12 +91,14 @@
 \newpage
 
 
-\section{Заключение}
+\section*{Заключение}
+\addcontentsline{toc}{section}{Заключение}
 \input{paragrafs/Zakl/Zakl.tex}
 \newpage
 
-\section{Список Литературы}
+\section*{Список использованных источников}
 \setlength{\parindent}{0cm}
+\addcontentsline{toc}{section}{Список использованных источников}
 \input{paragrafs/Spisok/Spisok.tex}
 \newpage
 
