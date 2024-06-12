@@ -12,6 +12,8 @@
 \usepackage{amssymb,amsfonts,amsmath,mathtext,cite,enumerate,float} %подключаем нужные пакеты расширений
 \usepackage{titlesec} %хотим вставлять в диплом рисунки?
 
+
+
 \titleformat{\section}{\filcenter\normalfont\Large\bfseries}{\thesection.}{0.6em}{}
 \titleformat{\subsection}{\filright\normalfont\large\bfseries}{\thesubsection.}{0.4em}{}
 
@@ -29,6 +31,8 @@
 \geometry{top=2cm}% верхнее поле
 \geometry{bottom=2cm}% нижнее поле
 
+
+
 \pagestyle{plain}
 
 \begin{document}
@@ -37,51 +41,44 @@
 
 \setcounter{page}{2}
 
-\section*{Содержание}
-\setlength{\parindent}{0cm}
-\addcontentsline{toc}{section}{Содержание}
-\input{paragrafs/Soder/Soder.tex}
-\newpage
-
 \setlength{\parindent}{1.25cm}
 
-\section*{Введение}
-\addcontentsline{toc}{section}{Введение}
+\tableofcontents
+\newpage
+
+\section{Введение}
 \input{paragrafs/Vvedenie/Vvedenie.tex}
 \newpage
 
-\chapter{Виртуальные машины VirtualBox}
-\section{Установка «VirtualBox» и «Ubuntu»}
-
+\section{Виртуальные машины VirtualBox}
+\subsection{Установка VirtualBox и Ubuntu}
 \input{paragrafs/Ustanovka/Ustanovka.tex}
-
-\newpage
-\section{Работа с «github»}
-\input{paragrafs/Github/Github.tex}
 \newpage
 
-\section{Клонирование виртуальной машины}
+\subsection{Клонирование виртуальной машины}
 \input{paragrafs/Klonir/Klonir.tex}
 \newpage
 
-\section{Увеличение объёма памяти виртуальной машин}
+\subsection{Увеличение объёма памяти виртуальной машин}
 \input{paragrafs/Uvelich/Uvelich.tex}
 \newpage
 
-\chapter{Практическая реализация шаблонов}
-\section*{Примеры задач и их код}
+\subsection{Работа с GitHub}
+\input{paragrafs/Github/Github.tex}
+\newpage
+
+\section{Практическая реализация шаблонов}
+\subsection{Примеры задач и их код}
 \input{paragrafs/Zadachi/Zadachi.tex}
 \newpage
 
 
-\section*{Заключение}
-\addcontentsline{toc}{section}{Заключение}
+\section{Заключение}
 \input{paragrafs/Zakl/Zakl.tex}
 \newpage
 
-\section*{Список Литературы}
+\section{Список Литературы}
 \setlength{\parindent}{0cm}
-\addcontentsline{toc}{section}{Список Литературы}
 \input{paragrafs/Spisok/Spisok.tex}
 \newpage
 
