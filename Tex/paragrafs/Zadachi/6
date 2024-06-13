@@ -8,7 +8,7 @@
 			tags: {
 				log: 1,
 			},
-			analys: ':' +
+			analys: 'Решение:' +
 				'$$\\log_{' + a + '}{(' + b.plusminus() + '+' + z + 'x' + ')}=' + '\\log_{' + a + '}{(' + t.plusminus() + '+' +
 				y + 'x' + ')}+{' + c + '}$$' +
 				'$${' + c + '} =\\log_{' + a + '}{' + a + '^' + c + '},\\ \\log_{a}{b}+' + '\\log_{a}{c}=' +
@@ -27,7 +27,7 @@
 				'\\begin{cases} x>' + ans + ' ' + ans1 + '\\\\~\\\\ x={' + (t * a.pow(c) - b) / ((-y * a.pow(c) + z).plusminus()) +
 				'}\\end{cases}$$' +
 
-				': $x=' + (t * a.pow(c) - b) / ((-y * a.pow(c) + z).plusminus())+'.' + '$',
+				'Ответ: $x=' + (t * a.pow(c) - b) / ((-y * a.pow(c) + z).plusminus())+'.' + '$',
 		});
 	});
 })();

@@ -1,5 +1,3 @@
-	'use strict'
-	
 chas2.task.setTask({
 		text: 'Материальная точка движется прямолинейно по закону:' +
 			'$$ x(t)=\\frac{1}{' + b + '}' + plusmin('x^3+' + ((-a * (x1 + x2)) / 2)) + plusmin('x^2+' + (a * x1 * x2 + c)) + plusmin('x+' + d) + ', $$'

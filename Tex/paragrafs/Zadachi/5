@@ -21,14 +21,14 @@
 		var z = y * a.pow(c) + u;
 
 		var x = (t * a.pow(c) - b) / (z.plusminus() - y.plusminus() * a.pow(c));
-		genAssertZ1000(x, "");
+		genAssertZ1000(x, "Корень имеет более 3 знаков после запятой");
 
 		var x1 = -b.plusminus() / z;
 		var x2 = -t.plusminus() / y;
-		genAssertZ1000(x1, "");
-		genAssertZ1000(x2, "");
-		genAssert(x > -b.plusminus() / z, "");
-		genAssert(x > -t.plusminus() / y, "");
+		genAssertZ1000(x1, ""Корень имеет более 3 знаков после запятой");
+		genAssertZ1000(x2, ""Корень имеет более 3 знаков после запятой");
+		genAssert(x > -b.plusminus() / z, "Корень не попадает в ОДЗ");
+		genAssert(x > -t.plusminus() / y, "Корень не попадает в ОДЗ");
 
 		var ans = x1;
 		var ans1;
@@ -41,7 +41,7 @@
 			j = y;
 		}
 
-		if (ans.isZ()) { //
+		if (ans.isZ()) { //Дробная часть для смешанного числа
 			ans1 = ' ';
 		} else {
 			ans = Math.trunc(ans);

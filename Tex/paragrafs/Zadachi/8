@@ -13,7 +13,7 @@ class GeometricProgression {
 	summa(nmember) {
 		this.nmember = nmember;
 		if (this.factor < 0) {
-			throw new Error("");
+			throw new Error("Нельзя найти сумму знакопеременной прогрессии!");
 		}
 		return (this.first * (Math.pow(this.factor, this.nmember) - 1)) / (this.factor - 1);
 	}
@@ -23,7 +23,7 @@ class GeometricProgression {
 			throw Error;
 		}
 		if (this.factor > 1) {
-			throw new Error("");
+			throw new Error("Прогрессия не является бесконечной!");
 		}
 		return this.first / (1 - this.factor);
 	}
@@ -32,12 +32,12 @@ class GeometricProgression {
 let a;
 let b;
 let n = -1;
-let str = prompt('', '');
+let str = prompt('Введите первый член прогрессии.', '');
 a = Number(str);
-str = prompt('', '');
+str = prompt('Введите множитель прогрессии.', '');
 b = Number(str);
 while (n <= 0) {
-	str = prompt('', '');
+	str = prompt('Введите номер члена прогрессии. Число должно быть больше нуля!', '');
 	n = Number(str);
 }
 

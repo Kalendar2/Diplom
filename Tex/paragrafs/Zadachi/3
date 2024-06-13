@@ -1,4 +1,4 @@
-(function() {
+(function(){
 	retryWhileError(function() {
 		'use strict';
 		let a = sl(2, 19);
@@ -6,7 +6,7 @@
 		let d = sl(2, 9);
 		NAtask.setEvaluationTask({
 			expr: '(varlog(' + b + ',' + a + '^' + d * sl(1, 9) + '))/(' + d + '(varlog(' + b + ',' + a + ')))',
-			authors: [''],
+			authors: ['Алендарь Сергей'],
 		});
 	}, 10000);
 })();
