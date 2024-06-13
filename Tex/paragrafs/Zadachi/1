@@ -1,0 +1,29 @@
+(function() {
+	'use strict';
+
+	var a = sluchch(0.5, 1, 0.5);
+	var b = 0;
+	if (a == 0.5) {
+		b = 6;
+	} else {
+		b = 3;
+	}
+
+	function plusmin(member) {
+		var el = math.parse(member);
+		return math.simplify(el).toTex();
+	}
+
+	var x2 = (sluchch(-15, -1) * (b / 3)).pm();
+	if (x2 < 0) {
+		var x1 = Math.abs(x2) + sluchch(6, 36, 2);
+		var ans = x1;
+	} else {
+		var x1 = -x2 - sluchch(6, 36, 2);
+		var ans = x2;
+	}
+
+	var c = Math.abs(a * x1 * x2) + sluchch(2, 100).pm();
+	var d = sluchch(-999, 999);
+
+

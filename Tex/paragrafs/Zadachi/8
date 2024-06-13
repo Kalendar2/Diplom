@@ -1,0 +1,56 @@
+class GeometricProgression {
+	constructor(first, factor) {
+		this.first = first;
+		this.factor = factor;
+		this.nmember = 0;
+	}
+
+	member(nmember) {
+		this.nmember = nmember;
+		return this.first * Math.pow(this.factor, this.nmember - 1);
+	}
+
+	summa(nmember) {
+		this.nmember = nmember;
+		if (this.factor < 0) {
+			throw new Error("");
+		}
+		return (this.first * (Math.pow(this.factor, this.nmember) - 1)) / (this.factor - 1);
+	}
+
+	infinitySumma() {
+		if (this.factor < 0) {
+			throw Error;
+		}
+		if (this.factor > 1) {
+			throw new Error("");
+		}
+		return this.first / (1 - this.factor);
+	}
+
+}
+let a;
+let b;
+let n = -1;
+let str = prompt('', '');
+a = Number(str);
+str = prompt('', '');
+b = Number(str);
+while (n <= 0) {
+	str = prompt('', '');
+	n = Number(str);
+}
+
+let progress = new GeometricProgression(a, b);
+
+console.log(progress.member(n));
+try {
+	console.log(progress.summa(n));
+	console.log(progress.infinitySumma());
+} catch (error) {
+	if (error.name == "Error") {
+		console.log(error.message);
+	} else {
+		throw error;
+	}
+}

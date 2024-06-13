@@ -1,0 +1,29 @@
+(function() {
+	retryWhileError(function() {
+		'use strict';
+
+		let a = sluchch(2, 10);
+		let b = sluchch(2, 4);
+		let n = sluchch(10, 24);
+		let l1 = sl1();
+		let l2 = 1 - l1;
+		let n2 = n - sluchch(5, 7);
+		let arr = [].iz();
+		let arr2 = [].iz();
+		let arr3 = [' + arr + '  ' + chislitlx(a, arr2, 'v'), '' + chislitlx(n, '')];
+
+		let progression = new ArithmeticProgression(a, b);
+
+		NAtask.setTask({
+			text: sklonlxkand(arr).de + '  ' + chislitlx(progression.sum(n), arr2, 'v') +
+				'.  ' + sklonlxkand(arr2).rm +
+				' .' +
+				'  ' + arr3[l1] + '.' +
+				'  ' + sklonlxkand(arr2).rm + '  ' + om.porchisl[n2].i[0] +
+				'  ' + arr3[l2] + '.',
+
+			answers: progression.member(n2),
+
+		});
+	}, 10000);
+})();

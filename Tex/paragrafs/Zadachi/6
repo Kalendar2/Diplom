@@ -1,0 +1,34 @@
+		chas2.task.setAdditiveEquationTask({
+			parts: ['-\\log_{' + a + '}{(' + [b.plusminus(), z + 'x'].slag() + ')}', '\\log_{' + a + '}{(' + [t.plusminus(),
+				y + 'x'
+			].slag() + ')}', c],
+			roots: x,
+			enablePartsSubtraction: [1, 0],
+		}, {
+			tags: {
+				log: 1,
+			},
+			analys: ':' +
+				'$$\\log_{' + a + '}{(' + b.plusminus() + '+' + z + 'x' + ')}=' + '\\log_{' + a + '}{(' + t.plusminus() + '+' +
+				y + 'x' + ')}+{' + c + '}$$' +
+				'$${' + c + '} =\\log_{' + a + '}{' + a + '^' + c + '},\\ \\log_{a}{b}+' + '\\log_{a}{c}=' +
+				'\\log_{a}{bc} \\ \\Rightarrow\\ \\log_{' + a + '}{(' + t.plusminus() + '+' + y + 'x' + ')}+\\log_{' + a +
+				'}{' + a.pow(c) +
+				'}=\\log_{' + a + '}{((' + t.plusminus() + '+' + y + 'x' + ')}\\cdot' + '{' + a.pow(c) +
+				')} \\ \\Rightarrow$$' +
+				'$$\\Rightarrow\\ \\begin{cases} {' + b.plusminus() + '+' + z + 'x' + '>0} \\\\ {' + t.plusminus() + '+' + y +
+				'x' +
+				'>0}\\\\ {(' + b.plusminus() + '+' + z + 'x' + ') = (' + t.plusminus() + '+' + y + 'x' + ')}\\cdot' + a.pow(c) +
+				'\\end{cases}\\Rightarrow \\begin{cases} {' + z + 'x>' + (-b.plusminus()) + '} \\\\ {' + y + 'x>' + (-t.plusminus()) +
+				'}\\\\{' + b.plusminus() + '+' + z + 'x' + ' = ' + t.plusminus() * a.pow(c) + '+' + y * a.pow(c) + 'x' +
+				'}\\end{cases}\\Rightarrow \\begin{cases} x>\\frac{' + (-b.plusminus()) + '}{' + z + '}' +
+				'\\\\~\\\\ x>\\frac{' + (-t.plusminus()) + '}{' + y + '}\\\\~\\\\ {' + (-y * a.pow(c) + z).plusminus() +
+				'x=' + (t * a.pow(c) - b) + '}\\end{cases}\\Rightarrow' +
+				'\\begin{cases} x>' + ans + ' ' + ans1 + '\\\\~\\\\ x={' + (t * a.pow(c) - b) / ((-y * a.pow(c) + z).plusminus()) +
+				'}\\end{cases}$$' +
+
+				': $x=' + (t * a.pow(c) - b) / ((-y * a.pow(c) + z).plusminus())+'.' + '$',
+		});
+	});
+})();
+

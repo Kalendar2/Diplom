@@ -12,7 +12,43 @@
 \usepackage{amssymb,amsfonts,amsmath,mathtext,cite,enumerate,float} %подключаем нужные пакеты расширений
 \usepackage{titlesec} %хотим вставлять в диплом рисунки?
 
+\usepackage{listings}
 
+\lstdefinelanguage{JavaScript}{
+  keywords={let, typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+  keywordstyle=\color{blue}\bfseries,
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  ndkeywordstyle=\color{darkgray}\bfseries,
+  identifierstyle=\color{black},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{purple}\ttfamily,
+  stringstyle=\color{red}\ttfamily,
+  morestring=[b]',
+  morestring=[b]"
+}
+
+\lstset{
+  language=JavaScript,
+  extendedchars=true,
+  basicstyle=\footnotesize\ttfamily,
+  showstringspaces=false,
+  breakatwhitespace=true,
+  showspaces=false,
+  numbers=left,
+  numberstyle=\footnotesize,
+  numbersep=9pt,
+  tabsize=2,
+  keepspaces=true,
+  breaklines=true,
+  showtabs=false,
+  captionpos=b
+  escapechar =| ,
+  frame=single ,
+  commentstyle=\itshape ,
+  stringstyle =\bfseries
+}
 
 \titleformat{\section}{\filcenter\normalfont\Large\bfseries}{\thesection.}{0.6em}{}
 \titleformat{\subsection}{\filright\normalfont\large\bfseries}{\thesubsection.}{0.4em}{}
@@ -37,7 +73,7 @@
 
 \begin{document}
 
-\includepdf[offset=0cm -0cm]{titulny_list_bak.pdf}
+\includepdf[offset=0cm -0cm]{tit.pdf}
 
 \setcounter{page}{2}
 
@@ -90,7 +126,7 @@
 \input{paragrafs/Zadachi/Zadachi.tex}
 \newpage
 
-
+\newpage
 \section*{Заключение}
 \addcontentsline{toc}{section}{Заключение}
 \input{paragrafs/Zakl/Zakl.tex}
@@ -100,6 +136,11 @@
 \setlength{\parindent}{0cm}
 \addcontentsline{toc}{section}{Список использованных источников}
 \input{paragrafs/Spisok/Spisok.tex}
+\newpage
+
+\section*{Приложение}
+\setlength{\parindent}{0cm}
+\addcontentsline{toc}{section}{Приложение}
 \newpage
 
 \appendix
