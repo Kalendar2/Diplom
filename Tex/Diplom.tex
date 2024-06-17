@@ -12,7 +12,6 @@
 \usepackage{amssymb,amsfonts,amsmath,mathtext,cite,enumerate,float} %подключаем нужные пакеты расширений
 \usepackage{titlesec} %хотим вставлять в диплом рисунки?
 
-
 \usepackage{listings}
 
 \lstdefinelanguage{JavaScript}{
@@ -142,8 +141,6 @@
 \geometry{top=2cm}% верхнее поле
 \geometry{bottom=2cm}% нижнее поле
 
-
-
 \pagestyle{plain}
 
 \begin{document}
@@ -175,6 +172,14 @@
 \input{paragrafs/Klonir/Klonir.tex}
 \newpage
 
+\subsection{Экспорт виртуальной машины}
+\input{paragrafs/Klonir/export.tex}
+\newpage
+
+\subsection{Импорт виртуальной машины}
+\input{paragrafs/Klonir/import.tex}
+\newpage
+
 \subsection{Увеличение объёма памяти виртуальной машин}
 \input{paragrafs/Uvelich/Uvelich.tex}
 \newpage
@@ -201,7 +206,7 @@
 \input{paragrafs/Zadachi/Zadachi1.tex}
 \newpage
 
-\subsection{Вычсления и преобразования}
+\subsection{Вычисления и преобразования}
 \input{paragrafs/Zadachi/Zadachi2.tex}
 \newpage
 
@@ -225,6 +230,7 @@
 \addcontentsline{toc}{section}{Заключение}
 \input{paragrafs/Zakl/Zakl.tex}
 \newpage
+
 
 \section*{Список использованных источников}
 \setlength{\parindent}{0cm}
