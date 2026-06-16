@@ -1,0 +1,58 @@
+	//Функция рисования графика
+	function drawGraphToDataURL() {
+		let canvas = document.createElement('canvas');
+		canvas.width = 400;
+		canvas.height = 400;
+		let ctx = canvas.getContext('2d');
+
+		ctx.drawCoordPlane(300, 300, {
+			hor: 1,
+			ver: 1
+		}, {
+			x1: '1',
+			y1: '1',
+			sh1: 13
+		}, 20);
+		ctx.scale(20, -20);
+		ctx.lineWidth = 0.1;
+
+		ctx.strokeStyle = "darkblue";
+		graph9AdrawFunction(ctx, function(x) {
+			return Math.abs(k1 * x + b1) + c1;
+		}, {
+			minX: -6.8,
+			maxX: 7.8,
+			minY: -6.8,
+			maxY: 6.8,
+			step: 0.05
+		});
+
+		ctx.strokeStyle = "red";
+		graph9AdrawFunction(ctx, function(x) {
+			return Math.abs(k2 * x + b2);
+		}, {
+			minX: -6.8,
+			maxX: 7.8,
+			minY: -6.8,
+			maxY: 6.8,
+			step: 0.05
+		});
+
+		ctx.save();
+		ctx.setTransform(1, 0, 0, 1, 0, 0);
+		ctx.font = "bold 16px Arial";
+		ctx.fillStyle = "darkblue";
+		ctx.fillText("f(x) = " + (fFormula + `${c1 >= 0 ? '+' : '-'} ${Math.abs(c1)}`).replace(/\|/g, '|'), 8, 255);
+		ctx.fillStyle = "red";
+		ctx.fillText("g(x) = " + gFormula.replace(/\|/g, '|'), 8, 275);
+		ctx.fillStyle = "red";
+		ctx.fillText('a', 215, 156);
+		ctx.fillText('_', 215, 157);
+		ctx.fillText(k2, 215, 174);
+		ctx.restore();
+
+		return canvas.toDataURL();
+	}
+
+	let imgSrc = drawGraphToDataURL();
+

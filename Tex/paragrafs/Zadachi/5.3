@@ -1,0 +1,18 @@
+		const checkSign = (member) =>
+			member > 0 ? 1 : member < 0 ? 0 : 2;
+		const checkAnswer = (member) =>
+			up[0] == member ? 0 : 1;
+		const checkZero = (member) =>
+			member == 0 ? "" : member;
+		const checkOne = (member) =>
+			member == 1 ? "" : member;
+		const checkZeroWithCases = (member) =>
+			member == 0 ? "x" : "(x" + sign[checkSign(member)] + Math.abs(member) + ")";
+
+		let answer = ["(-∞;" + a + ["]", ")"][checkAnswer(a)] + "U" + ["[", "("][checkAnswer(b)] + b + ";" + c + "]U" + [
+				"[", "("
+			][checkAnswer(d)] + d + ";" + e + ["]", ")"][checkAnswer(e)],
+			["[", "("][checkAnswer(a)] + a + ";" + b + ["]", ")"][checkAnswer(b)] + "U[" + c + ";" + d + ["]", ")"][
+				checkAnswer(d)
+			] + "U" + ["[", "("][checkAnswer(e)] + e + ";+∞)"
+		][slSign2];

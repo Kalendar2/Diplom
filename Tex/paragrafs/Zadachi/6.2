@@ -1,0 +1,12 @@
+	// Вспомогательные функции для вывода
+	const checkSign = (member) =>
+		member > 0 ? `+ ${member}` : member < 0 ? `- ${-member}` : ``;
+	const checkOne = (member) =>
+		member === 1 ? '' : (member === -1 ? '-' : member);
+
+	// Формулы для отображения
+	let fFormula = `|${checkOne(k1)}x ${b1 >= 0 ? '+' : '-'} ${Math.abs(b1)}|`;
+	let gFormula = `|${checkOne(k2)}x - a|`;
+	if (b1 === 0) fFormula = `|${k1}x|`;
+	let leftExpr = gFormula + (slC1 ? '' : `${c1 >= 0 ? '-' : '+'} ${Math.abs(c1)}`);
+	let rightExpr = fFormula + (slC1 ? `${c1 >= 0 ? '+' : '-'} ${Math.abs(c1)}` : '');

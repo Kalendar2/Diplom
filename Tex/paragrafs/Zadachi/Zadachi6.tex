@@ -1,27 +1,67 @@
-\textbf{Тригонометрическая задача №77492}
+\textbf{Примеры задач №18 ЕГЭ профильного уровня}
+
+\begin{figure}[h]
+		\centering
+		\includegraphics[width=1\linewidth]{VM/ttt1.png}
+		\includegraphics[width=1\linewidth]{VM/ttt2.png}
+\end{figure}
+
+Вначале выбираются целые коэффициенты \texttt{k1} $\\in$ [1,2], \texttt{b1} $\in$ [-4,3], \texttt{c1} $\in$ [-3,-1], \texttt{k2 = k1 + sl(1,3)}, \texttt{b2 = -4*k2}.
+
+Вычисляются точки пересечения графиков: \texttt{left = (c1 - b1)/k1, right = (-c1 - b1)/k1}.
+
+Проверяется, чтобы вершины модулей не выходили за пределы [-5.5, 5.5] по обеим осям – иначе генерация повторяется. Это гарантирует, что график поместится на canvas.
+
+\lstinputlisting{paragrafs/Zadachi/6.1}
+
+Используются функции checkSign и checkOne для корректной визуализации.
+
+Случайный флаг \texttt{slC1} определяет, в какую часть неравенства пойдёт \texttt{c1} (слева или справа), что меняет вид:
+\texttt{|k2·x - a| + c1} $\le$ \texttt{|k1·x + b1|} или \texttt{|k2·x - a|} $\le$ \texttt{|k1·x + b1| + c1}.
+
+\lstinputlisting{paragrafs/Zadachi/6.2}
+
+Функция \texttt{drawGraphToDataURL} создаёт canvas 400×400, рисует координатную сетку с помощью вспомогательной функции проекта \texttt{ctx.drawCoordPlane}, затем строит графики \texttt{f(x)} и \texttt{g(x)} через \texttt{graph9AdrawFunction}.
+
+На графике синим цветом отображается \texttt{f(x)}, красным – \texttt{g(x)}.
+
+Подписи функций выносятся в левый верхний угол; также подписывается точка \texttt{a}, делённая на k2 (угловой коэффициент).
+
+Результат преобразуется в \texttt{dataURL} и вставляется в поле \texttt{analys} как <img>.
+    
+\lstinputlisting{paragrafs/Zadachi/6.3}
+
+Решение разбито на два случая в зависимости от того, где находится a относительно точек пересечения:
+
+Случай 1 \texttt{a} $\le$ \texttt{k2·left} – левая ветвь.
+
+Раскрывается модуль \texttt{|k2·x - a|} с учётом знака подмодульного выражения при \texttt{x} в окрестности решения.
+
+    Получается система линейных неравенств, из которой находятся границы для \texttt{x} в виде выражений, зависящих от \texttt{a}.
+
+    Длина отрезка решений приравнивается к 1, откуда выражается \texttt{a1} в виде дроби.
+
+Случай 2 \texttt{a} $\ge$ \texttt{k2·right} – правая ветвь.
+
+    Аналогично раскрывается модуль \texttt{|k2·x - a|}, но с другим знаком.
+
+    Получается второе значение \texttt{a2}.
+
+Оба значения приводятся к несократимой дроби с помощью \texttt{gcd} и выводятся как \texttt{a1} и \texttt{a2}.
+
+Ответ представляет собой два числа, разделённых запятой:
+
+\texttt{answer = firstAnswer + ',' + secondAnswer}.
+
+Числа могут быть как целыми, так и обыкновенными дробями.
+
+\lstinputlisting{paragrafs/Zadachi/6.4}
+
+\textbf{Задание с решением, сгенерированные по шаблону:}
 
 	\begin{figure}[h]
 		\centering
-		\includegraphics[width=1\linewidth]{VM/ttt.png}
-	\end{figure}
-
-
-\textbf{Код для задачи №77492:}
-
-
-\lstinputlisting{paragrafs/Zadachi/9}
-
-В коде этой задачи не использовалась библиотека \texttt{setMinimaxFunctionTask}, потому что здесь стояла другая цель. Здесь нужно найти точку максимума (минимума) функции, а не её максимальное (минимальное) значение. 
-
-Также здесь, присутсвуют подробное поясненяющее решение, которое нельзя было бы получить при использовании библиотеки из прошлой задачи.
-
-\newpage
-
-\textbf{Решения тригонометрической задачи, сгенерированные шаблоном}
-
-	\begin{figure}[h]
-		\centering
-		\includegraphics[width=0.8\linewidth]{VM/71.png}
-		\includegraphics[width=0.8\linewidth]{VM/72.png}
+		\includegraphics[width=1\linewidth]{VM/18.3.png}
+		\includegraphics[width=1\linewidth]{VM/18.4.png}
 	\end{figure}
 	

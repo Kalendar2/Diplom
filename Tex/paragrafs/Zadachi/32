@@ -1,0 +1,27 @@
+	objectsArray1.sort((a, b) => a[1] - b[1]);
+	objectsArray2.sort((a, b) => a[1] - b[1]);
+	objectsArray3.sort((a, b) => a[1] - b[1]);
+	objectsArray4.sort((a, b) => a[1] - b[1]);
+
+	let verySmallObjects = createObjectsWithValues(objectsArray1);
+	let smallObjects = createObjectsWithValues(objectsArray2);
+	let mediumObjects = createObjectsWithValues(objectsArray3);
+	let bigObjects = createObjectsWithValues(objectsArray4);
+
+	let indexObject = [0, 1, 2, 3];
+	let indexValue = [0, 1, 2, 3];
+	indexObject.shuffle();
+	indexValue.shuffle();
+	let sluchValueS = 0;
+	let sluchValueM = 0;
+	let turnValueBToValueM = 0;
+
+	let sluchIndexVerySmallObject = sluchch(0, verySmallObjects.length - 1);
+	let sluchIndexSmallObject = sluchch(0, smallObjects.length - 1);
+	let sluchIndexMediumObject = sluchch(0, mediumObjects.length - 1);
+	let sluchIndexBigObject = sluchch(0, bigObjects.length - 1);
+
+	let valueVS = verySmallObjects[sluchIndexVerySmallObject][1];
+	let valueS = smallObjects[sluchIndexSmallObject][1];
+	let valueM = mediumObjects[sluchIndexMediumObject][1];
+	let valueB = bigObjects[sluchIndexBigObject][1];

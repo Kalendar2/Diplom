@@ -1,15 +1,58 @@
-\textbf{Код задачи №26695:}
+\textbf{Примеры задач №15 ЕГЭ профильного уровня}
 
-\lstinputlisting{paragrafs/Zadachi/11}
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=0.55\linewidth]{VM/15.3.png}
+		\includegraphics[width=0.55\linewidth]{VM/15.4.png}
+\end{figure}
 
-Одной из особенностей этого шаблона является, использующаяся в нём библиотека \texttt{setMinimaxFunctionTask}, которая берёт на себя большую часть работы по подбору значейний, а также отображению задачи на экране. Но всё же трудности могут возникнуть при подборе значений для  \texttt{primaryStep:} и \texttt{secondaryStep:}, отвещающих за первичный и вторичный перебор значений максимума или минимума соответственно. Сначала поиск проходит первичным шагом, затем в окрестности предполагаемого ответа, происходит поиск вторичным шагом. Чем меньше задать шаги поиска, тем больше будет нагрузка и дольше программа будет подбирать значение, а если сделать наоборот, и задать шаги большего размера, то увеличится скорость поиска, но пострадает точность решения.
+Вначале объявляются переменные \texttt{a}, \texttt{b}, \texttt{c}, \texttt{d}, \texttt{e}, которые являются границами интервала, который входит в ответ.
+
+Переменая \texttt{c} , это дробь равная \texttt{numerator/denominator}, где \texttt{denominator} от 2 до 5, а \texttt{numerator = denominator*m - sign(m)}, где \texttt{m = b} или \texttt{d}. Это гарантирует, что \texttt{c} находится строго между \texttt{b} и \texttt{d}.
+
+Проверяется \texttt{genAssertIrreducible}, чтобы дробь была несократимой.
+
+Массив \texttt{up = [a, b, d, e]} перемешивается, чтобы первый элемент \texttt{up[0]} пошёл в числитель. Остальные три элемента \texttt{down} – войдут в знаменатели.
+
+Основываясь на значениях этих пяти переменных, вычисляются числители \texttt{N\_A}, \texttt{N\_B} и \texttt{N\_C} для трёх дробей, которые образуют изначальное неравенство.
+
+\lstinputlisting{paragrafs/Zadachi/5.1}
+
+В шаблоне присутсвуют фунции, которые отвечают за корректную визуализацию задания без лишних символов:
+
+\texttt{checkSign} – возвращает 0,1 или 2 для отрицательного, положительного или нулевого значения числа,
+
+\texttt{checkZero} – подставляет пустую строку для нулевого слагаемого,
+
+\texttt{checkOne} – опускает 1 при умножении,
+
+\texttt{checkZeroWithCases} – выводит \texttt{x} без скобок для нулевого корня, иначе возвращает со скобками.
+
+\lstinputlisting{paragrafs/Zadachi/5.2}
+
+Однако \texttt{N\_A}, \texttt{N\_B} и \texttt{N\_C}  могут быть дробными. С помощью вспомогательных функций \texttt{toFraction}, \texttt{gcd}, \texttt{lcm} они приводятся к общему знаменателю, а затем умножаются на \texttt{commonDen} и сокращаются на \texttt{g\_all}.
+
+Получаются целые \texttt{A\_int}, \texttt{B\_int}, \texttt{C\_int}, не превышающие 1000, благодаря проверке через \texttt{genAssert}. Эти числа становятся финальными числителями простейших дробей в условии задачи.
+
+\lstinputlisting{paragrafs/Zadachi/5.3}
+
+\texttt{answer} формируется как одна из двух строк:
+
+    Первая форма: (-$\infty$; a] U [b; c] U [d; e)
+
+    Вторая форма: [a; b) U [c; d] U [e; +$\infty$)
+
+Строгие и нестрогие скобки зависят от \texttt{checkAnswer}, который сравнивает элемент \texttt{up[0]} с границами.
+
+\lstinputlisting{paragrafs/Zadachi/5.4}
 
 
-\textbf{Задания сгенерированные по шаблону задачи №26695.}
-	\begin{figure}[h]
+
+\textbf{Примеры, сгенерированных шаблоном задач:}
+
+\begin{figure}[h]
 		\centering
-		\includegraphics[width=1\linewidth]{VM/p1.png}
-		\includegraphics[width=1.01\linewidth]{VM/aaa.jpeg}
-	\end{figure}
-
+		\includegraphics[width=1\linewidth]{VM/15.5.png}
+		\includegraphics[width=1\linewidth]{VM/15.6.png}
+\end{figure}
 	

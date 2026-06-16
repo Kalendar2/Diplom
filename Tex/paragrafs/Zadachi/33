@@ -1,0 +1,20 @@
+	if (sl1() && typeIndex < 3) {
+		valueB = valueB * [1000, 24, 1000][typeIndex];
+		sluchValueM = 1;
+	}
+
+	let newSluchIndexSmallObject = smallObjects.length - 1 - sl(0, 2);
+	let newSluchIndexMediumObject = mediumObjects.length - 1 - sl(0, 2);
+
+	if (sluchIndexSmallObject < 3 && sl(0, 1)) {
+
+		valueVS = smallObjects[newSluchIndexSmallObject][1];
+		sluchValueS = 1;
+		turnValueBToValueM = 1;
+	}
+
+	if (sluchIndexMediumObject < 3 && sl(0, 1)) {
+		valueB = mediumObjects[newSluchIndexMediumObject][1];
+		sluchValueM = 1;
+		turnValueBToValueM = 1;
+	}

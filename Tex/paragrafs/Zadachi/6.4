@@ -1,0 +1,90 @@
+	//Отображение знаков при раскрытии модуля
+	let subExprAtLeft = k1 * left + b1; // равно c1 (отрицательное)
+	let signLeft = (subExprAtLeft >= 0) ? '+' : '-';
+	let coeffAfterAbs = (signLeft === '+') ? k1 : -k1;
+	let constAfterAbs = (signLeft === '+') ? b1 : -b1;
+	let rightPartConst = constAfterAbs + c1; // свободный член (целое)
+	let rightPartCoeff = coeffAfterAbs; // коэффициент при x (целое)
+
+	//Вычисление a в виде дроби
+	let R = rightPartConst;
+	let rc = rightPartCoeff;
+	let P = k2 - rc;
+	let Q = k2 + rc;
+	let Z = k2 - k1;
+	let N = k2 + k1;
+
+	let numerator1 = P * Q - 2 * k2 * R;
+	let denominator1 = 2 * rc;
+	let numerator2 = Z * N - 2 * k2 * (b1 + c1);
+	let denominator2 = 2 * k1;
+
+	//НОД
+	let gcd = (a, b) => {
+		a = Math.abs(a);
+		b = Math.abs(b);
+		while (b !== 0) {
+			let t = b;
+			b = a % b;
+			a = t;
+		}
+		return a;
+	};
+	let common = gcd(numerator1, denominator1);
+	numerator1 /= common;
+	denominator1 /= common;
+	common = gcd(numerator2, denominator2);
+	numerator2 /= common;
+	denominator2 /= common;
+	// Приводим знак к знаменателю > 0
+	if (denominator1 < 0) {
+		numerator1 = -numerator1;
+		denominator1 = -denominator1;
+	}
+	if (denominator2 < 0) {
+		numerator2 = -numerator2;
+		denominator2 = -denominator2;
+	}
+	let checkOneDenom = (num, denom) => denom === 1 ? num : '\\frac{' + num + '}{' + denom + '}';
+	let secondAWithoutCases = (N === 1) ? 'a' + checkSign(b1 + c1) : '\\frac{a' + checkSign(-(b1 + c1)) + '}{' + N + '}';
+	let firstAWithoutCases = (Q === 1) ? 'a' + checkSign(R) : '\\frac{a' + checkSign(-R) + '}{' + Q + '}';
+	let aFraction = (denominator1 === 1) ? numerator1.toString() : `\\frac{${numerator1}}{${denominator1}}`;
+	let bFraction = (denominator2 === 1) ? numerator2.toString() : `\\frac{${numerator2}}{${denominator2}}`;
+	let firstAnswer = (denominator1 === 1) ? numerator1 : numerator1 + '/' + denominator1;
+	let secondAnswer = (denominator2 === 1) ? numerator2 : numerator2 + '/' + denominator2;
+	let answer = firstAnswer + ',' + secondAnswer;
+
+	NAtask.setTask({
+		text: 'Найдите все значения a, при каждом из которых решения неравенства $' + leftExpr + '\\le' + rightExpr + '$' + ' образуют отрезок длины 1.',
+		answers: answer, // ответ в виде дроби или целого
+		analys: '<b>Решение:</b>' + 
+			'Построим схематично графики функций $f(x)=' + fFormula + `${c1 >= 0 ? '+' : '-'} ${Math.abs(c1)}` + '$ и $g(x)=' + gFormula + '$.' +
+			'<br><br><div style="text-align: center;"><img src="' + imgSrc + '"></div>' +
+			'На рисунке видно, что неравенство имеет решения только при ' +
+			'$$\\frac{a}{' + k2 + '} \\le ' + left + ' \\text{ или } \\frac{a}{' + k2 + '} \\ge ' + right + '.$$' +
+
+			'$$ 1. ' + '\\begin{cases} a \\le ' + k2 * left + ', \\\\ | ' + k2 + 'x - a| \\le ' + checkOne(rc) + 'x' + checkSign(R) + ' \\end{cases}' +
+			'\\Leftrightarrow' +
+			'\\begin{cases} a \\le ' + k2 * left + ', \\\\ ' + k2 + 'x - a \\le ' + checkOne(rc) + 'x' + checkSign(R) +
+			', \\\\ ' + k2 + 'x - a \\ge ' + checkOne(-rc) + 'x' + checkSign(-R) + ' \\end{cases}' +
+			'\\Leftrightarrow' +
+			'\\begin{cases} a \\le ' + k2 * left + ', \\\\ x \\le ' + checkOneDenom('a' + checkSign(R), P) +
+			', \\\\ x \\ge ' + checkOneDenom('a' + checkSign(-R), Q) + '. \\end{cases}' + '$$' +
+			'Решения образуют отрезок длины 1, если ' +
+			'$$ ' + checkOneDenom('a' + checkSign(R), P) + ' - ' + firstAWithoutCases + ' = 1 \\text{, откуда } a = ' + 
+			aFraction + '.$$' +
+
+			'$$ 2. ' + '\\begin{cases} a \\ge ' + k2 * right + ', \\\\ | ' + k2 + 'x - a| \\le ' + checkOne(k1) + 'x' + checkSign(b1 + c1) + ' \\end{cases}' +
+			'\\Leftrightarrow' +
+			'\\begin{cases} a \\ge ' + k2 * right + ', \\\\ ' + k2 + 'x - a \\le ' + checkOne(k1) + 'x' + checkSign(b1 + c1) +
+			', \\\\ ' + k2 + 'x - a \\ge ' + checkOne(-k1) + 'x' + checkSign(-(b1 + c1)) + ' \\end{cases}' +
+			'\\Leftrightarrow' +
+			'\\begin{cases} a \\ge ' + k2 * right + ', \\\\ x \\le ' + checkOneDenom('a' + checkSign(b1 + c1), Z) +
+			', \\\\ x \\ge ' + checkOneDenom('a' + checkSign(-(b1 + c1)), N) + '. \\end{cases}' + '$$' +
+			'Решения образуют отрезок длины 1, если ' +
+			'$$ ' + checkOneDenom('a' + checkSign(b1 + c1), Z) + ' - ' + secondAWithoutCases + ' = 1 \\text{, откуда } a = ' +
+			bFraction + '.$$',
+		authors: ['Алендарь Сергей']
+	});
+	return true;
+}, 100000);

@@ -1,0 +1,63 @@
+\textbf{Примеры задач №13 ЕГЭ профильного уровня}
+
+\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.8\linewidth]{VM/13.1.png}
+		\includegraphics[width=0.8\linewidth]{VM/13.11.png}
+\end{figure}
+
+В начале кода определяется собственная функция \texttt{math.expandProdSums}, которая раскрывает произведение суммы: \texttt{(n1+n2)*n3 → n1*n3 + n2*n3}. Это нужно для корректного разложения выражения \texttt{(sin x + c)(sin x + d)}.
+
+Далее генерируются:
+
+\texttt{funcType} – тип функции (0 = sin, 1 = cos).
+
+\texttt{chislo} – случайное число из набора {-1; -0,5; 0; 0,5; 1} или сгенерированное с шагом 0,1 через \texttt{slKrome(0.5, 0.1, 0.9, 0.1).pm()}. Числа из первого набора являются табличными значениями, а из второго нет. Это разделение нужно для генерации ответов либо в виде дробей с пи, либо в виде арксинусов и арккосинусов.
+
+\texttt{abroad} – целое от –5 до 5, исключая 0.
+
+\lstinputlisting{paragrafs/Zadachi/7.1}
+
+Строятся узлы \texttt{mult1 = sin(x) + chislo} и \texttt{mult2 = sin(x) + abroad} (или cos).
+Затем создаётся произведение \texttt{prod = mult1 * mult2}, и последовательно строятся промежуточные этапы и финальное выражение \texttt{finalExpr}.
+
+\lstinputlisting{paragrafs/Zadachi/7.2}
+
+С помощью функции \texttt{removeDuplicates} из \texttt{equations} отбираются уникальные варианты. Они выводятся в поле analys как цепочка эквивалентных преобразований.
+
+Для каждого корня значений \texttt{-chislo} и \texttt{-abroad} составляются символические выражения корней в общем виде:
+
+    для синуса: x = arcsin(val) + 2$\pi$k и x = $\pi$ - arcsin(val) + 2$\pi$k
+
+    для косинуса: x = arccos(val) + 2$\pi$k и x = -arccos(val) + 2$\pi$k
+   
+Функция \texttt{getRootSymbols} возвращает массив объектов с полями \texttt{expr} (символьное выражение, содержащее k), \texttt{numeric} (числовое значение основного угла), \texttt{period} (2$\pi$).
+
+Далее \texttt{findRootsWithSymbols} для каждого символического корня перебирает целые \texttt{k} от \texttt{kMin} до \texttt{kMax} и вычисляет числовые значения, попадающие в заданный интервал. Корни сортируются, дубликаты удаляются.
+
+Если числовое значение корня оказывается табличным углом, то его символьное представление заменяется на компактную запись через $\pi$. Для этого используется \texttt{isTableAngle} и \texttt{toPiFraction}.
+
+Если флаг \texttt{slPi} истинен, то границы интервала выводятся в радианах как десятичные дроби, преобразованные в обыкновенные через \texttt{toFraction}. Если ложен – в долях $\pi$ с помощью formatBound, причём знаменатель согласован с \texttt{denominator}, чтобы дробь была несократимой.
+
+\lstinputlisting{paragrafs/Zadachi/7.3}
+
+В поле \texttt{analys} последовательно выводятся:
+
+Цепочка эквивалентных уравнений через \texttt{uniqueEquations},
+
+Общее решение в виде объединения серий,
+
+Отобранные корни на заданном интервале.
+
+Поле answers содержит строку, пригодную для автоматической проверки: все корни, разделённые запятыми, преобразованные функцией \texttt{toInputFormat}. Это необходимо для сравнения с вводом ученика.
+
+\lstinputlisting{paragrafs/Zadachi/7.4}
+
+\textbf{Задание с решением, сгенерированные по шаблону:}
+
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=1\linewidth]{VM/13.2.png}
+		\includegraphics[width=1\linewidth]{VM/13.3.png}
+	\end{figure}
+	

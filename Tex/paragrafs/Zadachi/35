@@ -1,0 +1,40 @@
+	let arrayObjects = [
+		[verySmallObjects[sluchIndexVerySmallObject][0], smallObjects[newSluchIndexSmallObject][0]][sluchValueS],
+		smallObjects[sluchIndexSmallObject][0],
+		mediumObjects[sluchIndexMediumObject][0],
+		[bigObjects[sluchIndexBigObject][0], mediumObjects[newSluchIndexMediumObject][0]][turnValueBToValueM]
+	];
+	
+	let uniqueNames = new Set(arrayObjects);
+	if (uniqueNames.size !== arrayObjects.length) {
+    		throw new Error('Повторяющиеся названия объектов');
+	}
+
+	let arraySluchObjects = indexValue.map(index => arrayObjects[index]);
+
+	let arrayValue = [
+		valueVS.ts() + ' ' + [measurements[0], measurements[1]][sluchValueS],
+		valueS.ts() + ' ' + measurements[1],
+		valueM.ts() + ' ' + measurements[2] + minutes,
+		valueB.ts() + ' ' + [measurements[3], measurements[2]][sluchValueM]
+	];
+
+	let left = arraySluchObjects.map((obj, i) => ({
+		expr: value[typeIndex] + ' ' + obj,
+		solution: arrayValue[indexValue[i]]
+	}));
+
+	let right = indexObject.map(i => arrayValue[i]);
+
+	NAtask.setCorrespondenceTask({
+		text: 'Установите соответствие между величинами и их возможными значениями: к каждому элементу первого столбца подберите соответствующий элемент из второго столбца.',
+		leftHeader: 'Величины',
+		rightHeader: 'Значения',
+		left,
+		right,
+		postText: '',
+		autoLaTeXLeft: false,
+		autoLaTeXRight: false,
+		preference: measurementTypes,
+	});
+}, 10000);

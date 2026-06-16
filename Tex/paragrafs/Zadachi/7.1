@@ -1,0 +1,22 @@
+(function() {
+	retryWhileError(function() {
+		retryWhileUndefined(function() {
+
+			'use strict';
+
+			math.expandProdSums = function(expr) {
+				return math.simplify(expr, [{
+					r: 'n1*n3 + n2*n3',
+					l: '(n1+n2)*n3'
+				}, {
+					r: 'n1*n3 - n2*n3',
+					l: '(n1-n2)*n3'
+				}]);
+			};
+
+			//ОСНОВНАЯ ГЕНЕРАЦИЯ
+			var funcType = sl1(); // 0 - sin, 1 - cos
+			var arcSinCos = slKrome(0.5, 0.1, 0.9, 0.1).pm();
+			var chislo = [-1, -0.5, 0, 0.5, 1, Math.round(arcSinCos * 10) / 10].iz();
+			var abroad = sl(2, 5).pm();
+			var sc = ['sin', 'cos'];

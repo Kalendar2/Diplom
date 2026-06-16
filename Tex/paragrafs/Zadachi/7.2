@@ -1,0 +1,24 @@
+			var mult1 = math.parse(sc[funcType] + '(x)' + checkSign(chislo) + checkZero(chislo));
+			var mult2 = math.parse(sc[funcType] + '(x)' + checkSign(abroad) + abroad);
+			var a = String(sl(2, 9));
+
+			var prod = new math.OperatorNode('*', 'multiply', [mult1, mult2]);
+			var e2 = math.expandProdSums(prod);
+			var e3 = math.simplify(e2);
+			var e4 = new math.OperatorNode('*', 'multiply', [math.parse(a), e3]);
+			var e5 = math.expandProdSums(e4);
+			var e6 = math.simplify(e5);
+			var e7 = math.expandProdSums(e6);
+			var finalExpr = math.simplify(e7);
+
+			var equations = [
+				finalExpr.toTex(),
+				e7.toTex(),
+				e6.toTex(),
+				e5.toTex(),
+				e4.toTex(),
+				e3.toTex(),
+				e2.toTex(),
+				prod.toTex()
+			];
+			var uniqueEquations = removeDuplicates(equations);

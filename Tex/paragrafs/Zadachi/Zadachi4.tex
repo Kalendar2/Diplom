@@ -1,55 +1,45 @@
-\textbf{Код класса арифметической прогрессии:}
-
-\lstinputlisting{paragrafs/Zadachi/7}
-
-В классе присутсвуют функции, которые высчитывают с помощью формул определённый член прогресси, а также сумму прогрессии. 
-
-Во второй части кода пользователь вводит значения, которые передаются в класс и принимаются в качестве аргументов функциями, после чего ответ выводится на экран.
-
-Задачи на арифметическую прогрессию
+\textbf{Примеры задач №16 ЕГЭ профильного уровня}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=1\linewidth]{VM/ar1.png}
-	\end{figure}
-	
-Шаблон использующий библиотеку со встроенным классом
-\\ арифметической прогрессии
+		\includegraphics[width=1\linewidth]{VM/16.1.png}
+		\quad
+		\includegraphics[width=1\linewidth]{VM/16.2.png}
+		\quad
+		\includegraphics[width=1\linewidth]{VM/16.22.png}
+\end{figure}
 
-\lstinputlisting{paragrafs/Zadachi/10}
+Следующий шаблон, объединяет в себе сразу три условия этих задач, выбирая подходящие начальные данные и ответ, для каждого из 3 случаев.
 
-\textbf{Задачи, сгенерированные по шаблонам, использующим код
-\\арифметической прогрессии}
-	\begin{figure}[h]
-		\centering
-		\includegraphics[width=1\linewidth]{VM/121.png}
-		\includegraphics[width=1\linewidth]{VM/221.png}
-		\includegraphics[width=1\linewidth]{VM/321.png}
-	\end{figure}
+\lstinputlisting{paragrafs/Zadachi/4}
 
+Шаблон генерирует: 
 
-Задачи на геометрическую прогрессию
+Случайный срок кредита \textbf{N} и период \textbf{n}.
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=1\linewidth]{VM/ar2.png}
-	\includegraphics[width=1\linewidth]{VM/ar3.png}
-	\end{figure}
+Случайную сумму кредита \textbf{S}.
 
-\textbf{Код геометрической прогрессии:}
+Месячную процентную ставку \textbf{xPercent}.
 
-\lstinputlisting{paragrafs/Zadachi/8}
+Вычисляет сумму процентов за первые \textbf{n} месяцев sumInterest по формуле суммы арифметической прогрессии, так как тело долга уменьшается равномерно каждый месяц.
 
-Помимо функций вычисления определённого члена прогрессии и её суммы, здесь также пристутсвует функция, вычисляющая сумму бесконечно убывающей прогрессии. Для этого она проверяет, является ли знаменатель прогрессии меньше единицы, и не является ли он меньше нуля, ведь в таком случае прогрессия является знакочередующейся, и следовательно её сумму уже нельзя найти.
+Общая выплата за \textbf{n} месяцев: \textbf{rez = n * monthlyPrincipal + sumInterest}.
 
- Во второй части пользователь также вводит переменные для прогрессии, и происходит вывод значений на экран.
+Возможны три варианта вопроса в зависимости от \textbf{variants}:
 
-\textbf{Задачи, сгенерированные по шаблонам, использующим код 
-\\геометрической прогрессии.}
+\textbf{variants = 0}: вопрос на сумму выплат за первые n месяцев – ответ \textbf{rez}.
+
+\textbf{variants = 1}: вопрос на нахождение месячной ставки, когда известна переплата в процентах – ответ \textbf{xPercent}.
+
+\textbf{variants = 2}: вопрос на процент переплаты – ответ \textbf{yPercent} или \textbf{yPercent+100} (в зависимости от slPer).
+
+\textbf{Примеры, сгенерированных шаблоном задач:}
 
 	\begin{figure}[h]
 		\centering
-		\includegraphics[width=1\linewidth]{VM/421.png}
-		\includegraphics[width=1\linewidth]{VM/521.png}
+		\includegraphics[width=1\linewidth]{VM/16.5.png}
+		\includegraphics[width=1\linewidth]{VM/16.6.png}
+		\includegraphics[width=1\linewidth]{VM/16.7.png}
+		\includegraphics[width=1\linewidth]{VM/16.8.png}
 	\end{figure}
 	

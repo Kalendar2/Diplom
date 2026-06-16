@@ -1,0 +1,12 @@
+			chas2.task.setTask({
+				text: 'А) Решите уравнение: $$' + finalExpr.toTex() + '=0$$ Б) Укажите корни, принадлежащие отрезку: $$\\left[' +
+					startStr + '; ' + endStr + '\\right]$$',
+				analys: 'Решение: ' + uniqueEquations.join('') +
+					'\n\n$$' + answerText + '$$' +
+					'\n\nКорни, попадающие в отрезок: $$' + formattedRoots + '$$',
+				answers: inputRoots,
+			});
+			return true;
+		});
+	}, 10000);
+})();
