@@ -1,21 +1,43 @@
 (function() {
 	retryWhileError(function() {
 		'use strict';
-		let a = sl(3, 50);
-		let b = sl(1, 100);
-		let c = sl(1,50);
-		let arr1 = ['+', '-'];
-		let maxmin1 = sl1();
-		let maxmin2 = (maxmin1 + 1) % 2;
-		NAtask.setMinimaxFunctionTask({
-			expr: arr1[maxmin1] + a + 'tan(x)' + arr1[maxmin2] + a+ 'x' + ['',arr1.iz()+c+'pi'].iz() + arr1.iz() + b,
-			leftEnd: ['0','-pi/4'].iz(),
-			rightEnd: ['0','pi/4'].iz(),
-			primaryStep: 0.00001,
-			secondaryStep: 0.000001,
+		let a = sl(1, 99);
+		let b = sl(2, 99);
+		let wholeNumA = sl(1, 9);
+		let c = sl(1, 99);
+		let d = sl(2, 99);
+		let wholeNumC = sl(1, 9);
+		let e = sl(1, 99);
+		let f = sl(2, 99);
+		let wholeNumE = sl(1, 9);
+		let div = [10, 100];
+
+		genAssertIrreducible(a, b);
+		genAssertIrreducible(c, d);
+		genAssertIrreducible(e, f);
+
+		NAtask.setEvaluationTask({
+			expr: 'divideColon(' + [
+				'(' + 
+					[
+						'mixed(' + wholeNumA + ',' + a + ',' + b + ')',
+						a + '/' + b,
+						slKrome(100, 11, 999) / div.iz()
+					].iz() + ')',
+					'(' + 
+						[
+							'mixed(' + wholeNumC + ',' + c + ',' + d + ')',
+							c + '/' + d
+						].iz() + ')'
+					].shuffle().join() + ')' + ['+', '-'].iz() +
+					'(' + 
+						[
+							'mixed(' + wholeNumE + ',' + e + ',' + f + ')',
+							e + '/' + f,
+							slKrome(100, 11, 999) / div.iz()
+						].iz() + ')',
 			authors: ['Алендарь Сергей'],
 		});
-	}, 1000);
+	}, 100000);
 })();
-//26704
-
+//506567

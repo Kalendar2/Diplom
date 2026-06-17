@@ -1,21 +1,16 @@
 (function() {
 	retryWhileError(function() {
 		'use strict';
-		let a = sl(2, 19);
-		let b = sl(1, 2);
-		let c;
-		let d = sl(2, 5);
-		if (a <= 9) {
-			c = sl(1, 2);
-		} else {
-			c = 0;
-		}
+		let a = sl(1, 99);
+		let b = sl(1, 99);
+		let c = sl(1, 99);
+		let div = [10,100];
+
 		NAtask.setEvaluationTask({
-			expr: ['varlog(sqrt(' + Math.pow(a, b) + '),' + Math.pow(a, b + c) + ')', 'varlog(sqrt(' + a + '),' + a + '^' +
-				d + ')'
-			].iz(),
+			expr: [ '(' + ['(' + a / div.iz() + ')', '(' + b / div.iz() + ')'].shuffle().join(['+','-'].iz()) + ')', 
+				'(' + c / div.iz()  + ')'].shuffle().join('/'),
 			authors: ['Алендарь Сергей'],
 		});
-	}, 10000);
+	}, 100000);
 })();
-//527441
+//509646

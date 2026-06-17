@@ -1,10 +1,16 @@
 (function() {
 	retryWhileError(function() {
 		'use strict';
+		let a = sl(1, 99);
+		let b = sl(1, 99);
+		let c = sl(1, 99);
+		let div = [10,100];
+
 		NAtask.setEvaluationTask({
-			expr: 'forceBrackets(0.1)^' + sl(2, 6) + '*10^' + sl(2, 6) + '*' + sl(2, 9) + '^' + sl(2, 6),
+			expr: ['divideColon(' + ['(' + a / div.iz() + ')', '(' + b / div.iz() + ')'].shuffle().join() + ')', 
+				'(' + c / div.iz()  + ')'].shuffle().join('*'),
 			authors: ['Алендарь Сергей'],
 		});
-	}, 10000);
+	}, 100000);
 })();
-//10000001
+//90080024
