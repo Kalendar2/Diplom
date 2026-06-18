@@ -11,7 +11,6 @@
 		let f = [e + sl(1, 49), sl(1, 99)];
 		let wholeNumE = sl(1, 9);
 		let div = [10, 100];
-
 		genAssertIrreducible(a, b[0]);
 		genAssertIrreducible(c, d[0]);
 		genAssertIrreducible(e, f[0]);

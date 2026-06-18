@@ -1,13 +1,15 @@
 (function() {
 	retryWhileError(function() {
 		'use strict';
+		let e1 = sl(2, 9).pm();
+		let e2 = sl(2, 9).pm();
+		let e3 = -(e1 * e2) + sl(1, 6).pm();
 		let a = sl(2, 9);
-		let b = slKrome([a], 2, 9);
-		let c = slKrome([a, b], 2, 9);
+
 		NAtask.setEvaluationTask({
-			expr: a + '*' + c + '^' + sl(2, 5) + '+' + b + '*' + c + '^' + sl(2, 5),
+			expr: ['('+a+'^' + e1 + ')^' + e2, +a+'^' + e3].shuffle().join('*'),
 			authors: ['Алендарь Сергей'],
 		});
-	}, 10000);
+	}, 1000);
 })();
-//509647
+//355380

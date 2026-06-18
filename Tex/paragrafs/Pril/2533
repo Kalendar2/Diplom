@@ -1,10 +1,14 @@
 (function() {
 	retryWhileError(function() {
 		'use strict';
+		let a = sl(1, 15);
+		let b = sl(2, 15);
+		let c = sl(2, 15);
+
 		NAtask.setEvaluationTask({
-			expr: '(-10)^' + sl(0, 5) + '+(-10)^' + sl(0, 5) + '+(-10)^' + sl(0, 5),
+			expr: 'sqrt('+ [a*b, b*c, c*a].shuffle().join('*') +')',
 			authors: ['Алендарь Сергей'],
 		});
-	}, 10000);
+	}, 1000);
 })();
-//511746
+//337700

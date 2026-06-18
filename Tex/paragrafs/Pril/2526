@@ -1,14 +1,16 @@
 (function() {
 	retryWhileError(function() {
 		'use strict';
-		let a = sl(2, 9);
-		let b = sl(1, 9).pm();
-		let c = slKrome([b, 0, 1, -1], -9, 9);
-		let d = slKrome([b, c, 0, 1, -1], -9, 9);
+		let e1 = sl(2, 9);
+		let e2 = sl(2, 9);
+		let e3 = e1 * e2;
+		let e4 = e3 + sl(1,6);
+
 		NAtask.setEvaluationTask({
-			expr: [a + '^' + b, '(' + a + '^' + c + '/' + a + '^' + d + ')'].shuffle().join('*'),
+			expr: '(' + ['(b^' + e1 + ')^' + e2, 'a^' + e4].shuffle().join('*') + ')/(a*b)^' + e3,
+			variables: {a: sl(2, 9), b: "sqrt(" + sl(2, 9) + ")"},
 			authors: ['Алендарь Сергей'],
 		});
-	}, 10000);
+	}, 1000);
 })();
-//508403
+//412211

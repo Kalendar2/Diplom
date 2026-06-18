@@ -1,21 +1,15 @@
 (function() {
 	retryWhileError(function() {
 		'use strict';
-		let a = sl(1, 99);
-		let b = sl(2, 99);
-		let c = sl(1, 99);
-		let d = sl(2, 99);
-		let e = sl(1, 99);
-		let f = sl(2, 99);
-		genAssertIrreducible(a, b);
-		genAssertIrreducible(c, d);
-		genAssertIrreducible(e, f);
+		let a = sl(1, 25);
+		let b = slKrome(isPolnKvadr, 2, 25);
+		let sign = ['+','-'];
 
 		NAtask.setEvaluationTask({
-			expr: ['divideColon(' + a + '/' + b + ', '+ e + '/' + f + ')', 
-				'(' + c + '/' + d + ')'].shuffle().join('*'),
+			expr: ['sqrt((' + [a + 'sqrt(' + b + ')', sl(1,99)].shuffle().join(sign.iz()) + ')^' + 2 + ')',
+				a + 'sqrt(' + b + ')'].shuffle().join(sign.iz()),
 			authors: ['Алендарь Сергей'],
 		});
-	}, 10000);
+	}, 1000);
 })();
-//510310
+//90080022

@@ -1,21 +1,16 @@
 (function() {
-	retryWhileError(function() {
-		'use strict';
-		let a = sl(1, 99);
-		let b = sl(2, 99);
-		let c = sl(1, 99);
-		let d = sl(2, 99);
-		let e = sl(1, 99);
-		let f = sl(2, 99);
-		genAssertIrreducible(a, b);
-		genAssertIrreducible(c, d);
-		genAssertIrreducible(e, f);
+    retryWhileError(function() {
+        'use strict';
 
-		NAtask.setEvaluationTask({
-			expr: ['divideColon(' + a + '/' + b + ', '+ e + '/' + f + ')', 
-				'(' + c + '/' + d + ')'].shuffle().join('*'),
-			authors: ['Алендарь Сергей'],
-		});
-	}, 10000);
+        let num_sqrt_x = sl(2, 50).pm();
+        let num_sqrt_y = sl(2, 50).pm();
+        let den_coef = sl(5, 100).pm();
+
+        NAtask.setEvaluationTask({
+            expr: [num_sqrt_x + '*sqrt(x)', num_sqrt_y + '*sqrt(y)'].shuffle().join('*') + '/(' + den_coef + '*sqrt(x '+'y))',
+            variables: {x: sl(2, 9), y: sl(2, 9)},
+            authors: ['Алендарь Сергей'],
+        });
+    }, 1000);
 })();
-//510310
+//900800903
